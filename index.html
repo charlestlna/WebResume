@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Charles Justine - Resume</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a href="#comments">Comments</a>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-flex">
+      <img src="profile.jpg" alt="Profile Picture" class="profile-pic" />
+      <div>
+        <h1>Charles Justine</h1>
+        <p class="tagline">Aspiring Full-Stack Developer | Code. Build. Create.</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Scrollable Main Content -->
+  <main class="snap-container">
+    <section id="about" class="fade-section">
+      <div class="container">
+        <h2>About Me</h2>
+        <p>I’m an IT student passionate about building efficient, user-friendly websites and apps. I enjoy learning new technologies, contributing to open-source, and solving real-world problems through code.</p>
+      </div>
+    </section>
+
+    <section id="education" class="fade-section">
+      <div class="container">
+        <h2>Education</h2>
+        <ul>
+          <li><strong>Lourdes Elementary School</strong> – Elementary (2011–2016)</li>
+      <li><strong>Dapdap High School</strong> – Junior & Senior High (2016–2023)</li>
+      <li><strong>Dominican College of Tarlac</strong> – BS in Information Technology (2023-Present)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="skills" class="fade-section">
+      <div class="container">
+        <h2>Skills</h2>
+        <ul class="skills">
+          <li>HTML, CSS, JavaScript</li>
+          <li>React, Firebase, Tailwind</li>
+          <li>Git & GitHub</li>
+          <li>Communication & Teamwork</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects" class="fade-section">
+      <div class="container">
+        <h2>Projects</h2>
+        <div class="project">
+          <h3>Medical Appointment System</h3>
+          <p>A full-featured system that allows patients to book appointments and doctors to manage schedules using Firebase.</p>
+        </div>
+        <div class="project">
+          <h3>Student Management Dashboard</h3>
+          <p>A clean, modular dashboard to manage student enrollments, courses, and instructors built using HTML, CSS, and JS.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="fade-section">
+      <div class="container">
+        <h2>Contact Me</h2>
+        <form>
+          <input type="email" placeholder="Your Email" required />
+          <textarea placeholder="Your Message" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="comments" class="fade-section">
+      <div class="container">
+        <h2>Leave a Comment</h2>
+        <form id="commentForm">
+          <input type="text" id="commentName" placeholder="Your Name" required />
+          <textarea id="commentText" placeholder="Your Comment" required></textarea>
+          <button type="submit">Post Comment</button>
+        </form>
+        <div id="commentList"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Charles Justine</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

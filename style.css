@@ -1,0 +1,247 @@
+:root {
+  --primary: #1f2937;
+  --accent: #4ade80;
+  --text: #e5e7eb;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--primary);
+  color: var(--text);
+}
+
+/* === NAVIGATION BAR === */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: #111827;
+  padding: 10px 0;
+  z-index: 1000;
+  border-bottom: 1px solid #333;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.navbar a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: var(--accent);
+}
+
+/* === HEADER === */
+header {
+  background: linear-gradient(90deg, #10b981, #22c55e);
+  color: white;
+  padding: 40px 0;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  transition: all 0.5s ease;
+}
+
+header.scrolled {
+  opacity: 0;
+  transform: translateY(-100%);
+  pointer-events: none;
+}
+
+.header-flex {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid white;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* === MAIN FULLPAGE SECTIONS === */
+.snap-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.fade-section {
+  min-height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 40px;
+  font-size: 1.25rem;
+  text-align: center;
+  transition: all 0.6s ease-out;
+}
+
+.fade-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* === UNIQUE SECTION BACKGROUNDS === */
+#about { background: #1f2937; }
+#education { background: #111827; }
+#skills { background: #1e293b; }
+#projects { background: #0f172a; }
+#contact { background: #1c1917; }
+#comments { background: #171717; }
+
+/* === SKILLS === */
+ul.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+}
+
+ul.skills li {
+  background: var(--accent);
+  color: #000;
+  padding: 5px 10px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+ul.skills li:hover {
+  background: #22c55e;
+  transform: scale(1.05);
+}
+
+/* === PROJECTS === */
+.project {
+  background: #374151;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* === FORMS === */
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #4b5563;
+  color: white;
+}
+
+form button {
+  background: var(--accent);
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background: #15803d;
+  transform: scale(1.05);
+}
+
+/* === COMMENTS === */
+#commentList {
+  margin-top: 20px;
+}
+
+.comment {
+  background: #1e293b;
+  padding: 10px;
+  border-left: 4px solid var(--accent);
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
+/* === FOOTER === */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111827;
+  font-size: 0.9rem;
+}
+
+/* === FADE-IN ON SCROLL === */
+.fade-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === SMOOTH SCROLL === */
+html {
+  scroll-behavior: smooth;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 600px) {
+  .header-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-pic {
+    width: 80px;
+    height: 80px;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .fade-section {
+    font-size: 1rem;
+  }
+
+  .fade-section h2 {
+    font-size: 2rem;
+  }
+}
